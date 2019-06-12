@@ -188,7 +188,7 @@ var NavigationPanelView = {
    * @return {external:ReactElement}
    */
   render: function () {
-    var classes = this.state.toggled || isMobile ? 'navigation-panel' : 'navigation-panel folded',
+    var classes = this.state.toggled ? 'navigation-panel' : 'navigation-panel folded',
       panelInstance = null,
       Panel = null;
 
