@@ -85,6 +85,8 @@ module.exports = {
     var searchbarInputField = getCSSRule('#searchbar-input-field');
     var searchbarSearchButton = getCSSRule('#searchbar-search-button');
 
+    var searchResultGroup = getCSSRule('.search-tools .group');
+
     var anchorLink = getCSSRule('#link');
 
     if (panelHeader) {
@@ -114,15 +116,15 @@ module.exports = {
       btnPrimary.style.color = config.secondaryColor;
     }
     if (btnPrimaryFocus) {
-      btnPrimaryFocus.style.backgroundColor = config.primaryColor;
+      btnPrimaryFocus.style.backgroundColor = config.activeColor || config.primaryColor;  //if there is a config.activeColor use it. otherwise use primary color.
       btnPrimaryFocus.style.color = config.secondaryColor;
     }
     if (btnPrimaryHover) {
-      btnPrimaryHover.style.backgroundColor = config.primaryColor;
+      btnPrimaryHover.style.backgroundColor = config.activeColor || config.primaryColor;
       btnPrimaryHover.style.color = config.secondaryColor;
     }
     if (btnPrimaryActive) {
-      btnPrimaryActive.style.backgroundColor = config.primaryColor;
+      btnPrimaryActive.style.backgroundColor = config.activeColor || config.primaryColor;
       btnPrimaryActive.style.color = config.secondaryColor;
     }
     if (btnPrimaryActiveHover) {
@@ -205,6 +207,9 @@ module.exports = {
     if (searchbarSearchButton) {
       searchbarSearchButton.style.backgroundColor = config.primaryColor;
       searchbarSearchButton.style.color = config.color;
+    }
+    if (searchResultGroup) {
+      searchResultGroup.style.backgroundColor = config.primaryColor;
     }
     if (anchorLink) {
       anchorLink.style.borderColor = config.primaryColor;
