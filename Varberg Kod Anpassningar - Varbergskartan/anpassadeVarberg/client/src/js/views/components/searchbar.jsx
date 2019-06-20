@@ -643,6 +643,22 @@ var SearchBarView = {
     ) : null;
   },
 
+  //AlertSearchBar'funkade inte. skrev denna funktion istället - Matt
+  renderAlertBar: function () {
+    var valueBar = this.props.model.get("valueBar");
+
+    if (valueBar.length > 0) {
+      return (
+      <p className="alert alert-info" id="alertSearchbar">
+      Skriv minst fyra tecken för att påbörja automatisk sökning. Tryck på {" "}
+      <b>retur</b> för att forcera en sökning.
+      </p>
+      )    
+    } else {
+      return (null)
+    }
+  },
+
   /**
    * Render the panel component.
    * @instance
@@ -748,7 +764,7 @@ var SearchBarView = {
             : shouldRenderSearchResults
             ? this.renderResults()
             : AlertSearchBar
-          : null}
+          : this.renderAlertBar()}
       </div>
     );
   }
