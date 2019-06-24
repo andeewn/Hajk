@@ -89,6 +89,8 @@ module.exports = {
 
     var anchorLink = getCSSRule('#link');
 
+    var btnToolbarHover = getCSSRule('.btn-primary.btn-toolbar:hover');
+
     if (panelHeader) {
       panelHeader.style.backgroundColor = config.primaryColor;
       panelHeader.style.borderColor = config.primaryColor;
@@ -116,7 +118,7 @@ module.exports = {
       btnPrimary.style.color = config.secondaryColor;
     }
     if (btnPrimaryFocus) {
-      btnPrimaryFocus.style.backgroundColor = config.activeColor || config.primaryColor;  //if there is a config.activeColor use it. otherwise use primary color.
+      btnPrimaryFocus.style.backgroundColor || config.primaryColor;  //if there is a config.activeColor use it. otherwise use primary color.
       btnPrimaryFocus.style.color = config.secondaryColor;
     }
     if (btnPrimaryHover) {
@@ -124,19 +126,17 @@ module.exports = {
       btnPrimaryHover.style.color = config.secondaryColor;
     }
     if (btnPrimaryActive) {
-      btnPrimaryActive.style.backgroundColor = config.activeColor || config.primaryColor;
+      btnPrimaryActive.style.backgroundColor || config.primaryColor;
       btnPrimaryActive.style.color = config.secondaryColor;
     }
     if (btnPrimaryActiveHover) {
       btnPrimaryActiveHover.style.backgroundColor = config.primaryColor;
       btnPrimaryActiveHover.style.color = config.secondaryColor;
     }
-
     if (btnPrimaryActiveHoverIE) {
       btnPrimaryActiveHoverIE.style.backgroundColor = config.primaryColor;
       btnPrimaryActiveHoverIE.style.color = config.secondaryColor;
     }
-
     if (btnMain) {
       btnMain.style.backgroundColor = config.primaryColor;
       btnMain.style.zIndex = 2;
@@ -158,16 +158,13 @@ module.exports = {
       btnMainActiveHover.style.backgroundColor = config.primaryColor;
       btnMainActiveHover.style.color = config.secondaryColor;
     }
-
     if (btnMainActiveHoverIE) {
       btnMainActiveHoverIE.style.backgroundColor = config.primaryColor;
       btnMainActiveHoverIE.style.color = config.secondaryColor;
     }
-
     if (drawToolsSelected) {
       drawToolsSelected.style.backgroundColor = config.primaryColor;
     }
-
     if (informationBlanketHeader) {
       informationBlanketHeader.style.backgroundColor = config.primaryColor;
       informationBlanketHeader.style.color = config.secondaryColor;
@@ -213,6 +210,9 @@ module.exports = {
     }
     if (anchorLink) {
       anchorLink.style.borderColor = config.primaryColor;
+    }
+    if (btnToolbarHover) {
+      btnToolbarHover.style.backgroundColor = config.primaryColor;
     }
   }
 };
