@@ -118,7 +118,7 @@ module.exports = {
       btnPrimary.style.color = config.secondaryColor;
     }
     if (btnPrimaryFocus) {
-      btnPrimaryFocus.style.backgroundColor || config.primaryColor;  //if there is a config.activeColor use it. otherwise use primary color.
+      btnPrimaryFocus.style.backgroundColor = config.primaryColor; 
       btnPrimaryFocus.style.color = config.secondaryColor;
     }
     if (btnPrimaryHover) {
@@ -126,7 +126,7 @@ module.exports = {
       btnPrimaryHover.style.color = config.secondaryColor;
     }
     if (btnPrimaryActive) {
-      btnPrimaryActive.style.backgroundColor || config.primaryColor;
+      btnPrimaryActive.style.backgroundColor = config.primaryColor;
       btnPrimaryActive.style.color = config.secondaryColor;
     }
     if (btnPrimaryActiveHover) {
